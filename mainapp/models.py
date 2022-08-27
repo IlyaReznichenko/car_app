@@ -14,10 +14,10 @@ class CarsModel(models.Model):
         return ' '.join(field_values)
 
 class CustomerModel(models.Model):
-    car = models.ForeignKey(CarsModel, on_delete=models.CASCADE)
     full_name = models.CharField('ФИО', max_length=75, blank=False)
     date_of_birth = models.DateField('Дата рождения', auto_now=False, auto_now_add=False)
     driving_license_number = models.CharField('Номер водительского удостоверения', max_length=10)
+    car = models.ForeignKey(CarsModel, on_delete=models.CASCADE)
 
     def __str__(self):
         field_values = []

@@ -5,6 +5,15 @@
     <title>Title</title>
 </head>
 <body>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="xml_div">
+            <input type="file" name="xml_file">
+        </div>
+        <button type="submit" class="btn btn-primary">
+            Загрузить xml файл
+        </button>
 
+    </form>
 </body>
 </html>
