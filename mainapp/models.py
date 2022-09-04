@@ -2,7 +2,7 @@ from django.db import models
 
 class CarsModel(models.Model):
     vin_code = models.CharField('VIN-код', max_length=17, blank=False)
-    brand = models.CharField('Бренд', max_length=20, blank=False)
+    brand = models.CharField('Марка', max_length=20, blank=False)
     model = models.CharField('Модель', max_length=30, blank=False)
     configuration = models.CharField('Комплектация', max_length=30, blank=False)
     price = models.PositiveIntegerField('Цена', blank=False)

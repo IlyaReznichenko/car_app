@@ -18,7 +18,7 @@ class UploadExcel(object):
             for cell in row:
                 row_data.append(str(cell.value))
             excel_data.append(row_data)
-
+        print(excel_data)
         self.excel_data = excel_data
 
 
